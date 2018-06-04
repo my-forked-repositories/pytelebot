@@ -141,8 +141,12 @@ def send_credentials(address):
 def main():
     # Create the EventHandler
 
+    TOKEN = os.getenv("TG_TOKEN")
+    PORT = os.environ.get("PORT")
+    NAME = "cctv-pytelebot"
+
     try:
-        updater = Updater(os.getenv("TG_TOKEN", None))
+        updater = Updater(TOKEN)
     except ValueError:
         logger.fatal("Could not get Telegram token! Exiting...")
         sys.exit(1)
@@ -174,8 +178,12 @@ def main():
     dp.add_error_handler(error)
 
     logger.info("Starting Telegram Bot...")
-    updater.start_polling()
+    # updater.start_polling()
 
+    updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path=TOKEN)
+    updater.bot.setWebhook("https://{}.herokuapp.com/{}".format(NAME, TOKEN))
     # Safe termination
     updater.idle()
 
