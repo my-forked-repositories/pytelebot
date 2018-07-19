@@ -1,5 +1,5 @@
 # pytelebot
-Telegram bot written in Python to control [Survaillance System](https://github.com/eliasxyz/homesentry).
+Telegram bot written in Python to control [Surveillance System](https://github.com/eliasxyz/homesentry).
 
 ## About
 This Telegram Bot is used to control a remote surveillance system. Bot accepts updates from the system and passes queries to it. Bot has the following commands:
