@@ -10,11 +10,12 @@ This Telegram Bot is used to control a remote surveillance system. Bot accepts u
 ## Usage
 Bot is meant to be hosted on Heroku cloud services, so it uses webhooks. To host bot locally, you need to comment out the following lines of code:
 
-`    updater.start_webhook(listen="0.0.0.0",
+```
+    updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
                           url_path=TOKEN)
     updater.bot.setWebhook("https://{}.herokuapp.com/{}".format(NAME, TOKEN))
-`
+```
 
 and uncomment `updater.start_polling()` line.
 
@@ -27,8 +28,8 @@ On start bot will ask you for device's IP address. When you have submitted a val
 ## Example
 Here is an example of how it works.
 
-![TG Example](examples/1.jpg?raw=true "TG_Example_1")
-![TG Example](examples/2.jpg?raw=true "TG_Example_1")
+![TG Example](./examples/1.jpg?raw=true "TG_Example_1")
+![TG Example](./examples/2.jpg?raw=true "TG_Example_1")
 
  
 
