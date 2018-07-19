@@ -23,13 +23,15 @@ Install required dependencies - `pip install -r requirements.txt`
 
 Now just run it - `python main.py`
 
-On start bot will ask you for device's IP address. When you have submitted a valid IP address, you can start motion-detectionmodule, and that's it!
+On start bot will ask you for device's IP address. When you have submitted a valid IP address, you can start motion-detection module, and that's it!
 
 ## Example
 Here is an example of how it works.
 
 ![TG Example](./examples/1.jpg?raw=true "TG_Example_1")
+
+User starts conversation with the bot and enters device's valid IP address, checks if it's available and starts motion-detection module.
+
 ![TG Example](./examples/2.jpg?raw=true "TG_Example_1")
 
- 
-
+Bot receives frames with captured motion from the remote surveillance system.
